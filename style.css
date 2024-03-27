@@ -1,0 +1,40 @@
+body{
+    margin: auto;
+    width: 500px;
+    text-align: center;
+}
+.calculator{
+    height: 550px;
+    width: 500px;
+    border: 3px solid white;
+}
+.output{
+    height: 150px;
+    width:480px;
+    border: 3px solid white;
+    margin: 8px auto;
+}
+.numbers{
+    height: 357px;
+    width: 270px;
+    margin: 8px 3px 0 8px;
+    flex-shrink: 0;
+
+}
+.flex1{
+    display: flex;
+    margin-bottom:
+}
+.operations{
+    height: 357px;
+    width: 270px;
+    border: 3px solid white;
+    margin: 8px 8px 0 8px;
+}
+button{
+    width:80px;
+    height:80px;
+    margin:3px;
+    font-size: 30px;
+
+}
