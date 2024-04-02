@@ -9,7 +9,7 @@ let num2=''
 let resultingNumber=0
 let operand=""
 let num3=''
-
+output.innerText='0'
 
 function operate(operand, num1,num2){
     if(operand==""){
@@ -50,8 +50,6 @@ ops.forEach(operation=>{
     resultingNumber=operate(operand,Number(resultingNumber),Number(num2))
     console.log(resultingNumber)
     output.innerText=resultingNumber
-
-
     operand=operation.innerText
    
 
@@ -66,9 +64,10 @@ del.addEventListener("click", ()=>{
 
 })
 ce.addEventListener("click", ()=>{
-    output.innerText=""
+    output.innerText="0"
     resultingNumber=0
-    num1=0
-    num2=0
+    num3=''
+    num2=''
+    operand=''
 })
 
