@@ -62,6 +62,7 @@ del.addEventListener("click", ()=>{
     let str = output.innerText
     let newStr = str.substr(0, str.length - 1)
     output.innerText=newStr
+    num3=Number(output.innerText)
 
 })
 ce.addEventListener("click", ()=>{
