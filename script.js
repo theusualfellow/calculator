@@ -3,6 +3,7 @@ const output = document.querySelector(".inputNums")
 const ops = document.querySelectorAll(".ops")
 const del= document.querySelector(".delete")
 const ce = document.querySelector(".ce")
+const sign = document.querySelector(".sign")
 
 let num1=''
 let num2=''
@@ -70,4 +71,9 @@ ce.addEventListener("click", ()=>{
     num2=''
     operand=''
 })
-
+sign.addEventListener("click",()=>{
+  
+        num3=Number(-num3)
+        output.innerText=num3
+    
+})
