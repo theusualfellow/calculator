@@ -4,23 +4,24 @@ body{
     text-align: center;
 }
 .calculator{
-    height: 550px;
-    width: 500px;
-    border: 3px solid white;
+    height: 513px;
+    width: 483px;
+
 }
 .output{
     height: 150px;
-    width:480px;
-    border: 3px solid white;
-    margin: 8px auto;
+    width:483px;
+    border-radius: 20px 20px 0 0;
     font-size: 30px;
     text-align: right;
+    background-color: rgb(170, 40, 90);
+    display: flex;
+    justify-content: right;
     
 }
 .numbers{
     height: 357px;
     width: 270px;
-    margin: 8px 3px 0 8px;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
@@ -30,27 +31,32 @@ body{
 }
 .flex1{
     display: flex;
-    margin-bottom:
+    background-color: rgb(42, 100, 155);
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    
+
 }
 .operations{
     height: 357px;
     width: 270px;
-    margin: 8px 8px 0 8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
 }
 button{
-    width:80px;
-    height:80px;
+    width:70px;
+    height:70px;
     margin:3px;
     font-size: 30px;
     flex-wrap: wrap;
+    background-color: rgb(71, 85, 92);
+    border-radius: 40px;
+    border-style: solid;
 
 }   
 .inputNums{
     font-size: 40px;
-    text-align: right;
-    margin: 50px 30px;
+    margin: 20px 30px 0 0
 }
