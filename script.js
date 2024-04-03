@@ -14,7 +14,6 @@ let num3=''
 let equalNum=''
 output.innerText='0'
 
-
 function operate(operand, num1,num2){
     if(operand==""){
         return num2
@@ -42,6 +41,23 @@ buttons.forEach(button => {
         num3=num3+num1
         output.innerText=num3
 
+
+        //set the color and radius values when button clicked
+
+        function setStyles(el, styles) {
+            Object.entries(styles).map(
+              ([property, value]) => el.style[property] = value
+            )
+          }
+        const origStyles = {
+            background: button.style.background,
+            border: button.style.border,
+        }
+        setStyles(button,{
+            background:"grey",
+            border:"5px solid orange"
+        })
+        window.setTimeout(()=> setStyles(button, origStyles), 100)
     }    
     )})
 
