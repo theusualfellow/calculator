@@ -3,7 +3,7 @@ body, .calculator{
 }
 
 body{
-    width: 500px;
+    width: 100vw;
     text-align: center;
     background-color: rgb(128, 97, 97);
 }
