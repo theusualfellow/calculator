@@ -5,58 +5,71 @@ body{
 }
 .calculator{
     height: 513px;
-    width: 483px;
+    width: 490px;
 
 }
 .output{
-    height: 150px;
-    width:483px;
+    height: 100px;
+    width:370px;
     border-radius: 20px 20px 0 0;
     font-size: 30px;
     text-align: right;
-    background-color: rgb(128, 78, 97);
+    background-color: rgb(110, 107, 114);
     display: flex;
     justify-content: right;
     
 }
 .numbers{
     height: 357px;
-    width: 270px;
-    flex-shrink: 0;
+    width: 200px;
+    flex-shrink:0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+
     
 
 }
 .flex1{
     display: flex;
-    background-color: rgb(42, 100, 155);
+    background-color: rgb(32, 41, 49);
     border-radius: 0 0 20px 20px;
-    padding: 10px;
+    width: 370px;
+    box-sizing: border-box;
+    padding:10px;
+ 
+
     
 
 }
 .operations{
     height: 357px;
-    width: 270px;
+    width: 140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+
 
 }
 button{
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     margin:3px;
     font-size: 30px;
-    flex-wrap: wrap;
-    background-color: rgb(71, 85, 92);
+    background-color: rgb(52, 56, 58);
+    color: rgb(121, 64, 69);
     border-radius: 40px;
     border-style: solid;
+    
 
 }   
 .inputNums{
     font-size: 40px;
-    margin: 20px 30px 0 0
+    margin: 20px 30px 0 0;
+    color: rgb(112, 49, 59);
+
+
 }
