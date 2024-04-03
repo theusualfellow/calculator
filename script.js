@@ -6,6 +6,7 @@ const ce = document.querySelector(".ce")
 const sign = document.querySelector(".sign")
 const equal = document.querySelector(".equal")
 const allButtons = document.querySelectorAll("button")
+let isClicked = false
 
 let num1=''
 let num2=''
@@ -62,8 +63,8 @@ buttons.forEach(button => {
         num1=output.innerText
         num3=num3+num1
         output.innerText=num3
-
-        //set the color and radius values when button clicked
+        isClicked=false
+      
     }
        
     )})
@@ -73,18 +74,28 @@ ops.forEach(operation=>{
     operation.addEventListener("click",()=>{
         console.log(num2)
         num2=num3
-        resultingNumber=operate(operand,Number(resultingNumber),Number(num2))
+        if(isClicked ==false){
+            resultingNumber=operate(operand,Number(resultingNumber),Number(num2))
+            num3=''
+            num2=''
+        }
         output.innerText=resultingNumber
         operand=operation.innerText
-        num3=''
-        num2=''
+          
+        isClicked=true        
+
+
+        
+       
 })})
 
 del.addEventListener("click", ()=>{
-    let str = output.innerText
-    let newStr = str.substr(0, str.length - 1)
-    output.innerText=newStr
-    num3=Number(output.innerText)
+    let str = num3
+    let newStr = Math.floor(str/10)
+    num3=Number(newStr)
+    num2=Number(newStr)
+    output.innerText=num2
+    
 
 })
 ce.addEventListener("click", ()=>{
@@ -110,5 +121,6 @@ equal.addEventListener("click", ()=>{
         num2='1'
         num3='1'
     }
+    
 })
 
