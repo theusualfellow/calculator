@@ -1,21 +1,35 @@
+body, .calculator{
+    margin:auto;
+}
+
 body{
-    margin: auto;
     width: 500px;
     text-align: center;
 }
+
 .calculator{
     height: 513px;
-    width: 490px;
-
 }
+
+.output, .flex1, .calculator{
+    width: 370px;
+}
+
+.output, .numbers, .flex1, .operations{
+    display: flex;
+}
+
+.numbers, .operations{
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .output{
     height: 100px;
-    width:370px;
     border-radius: 20px 20px 0 0;
     font-size: 30px;
     text-align: right;
     background-color: rgb(110, 107, 114);
-    display: flex;
     justify-content: right;
     
 }
@@ -23,33 +37,20 @@ body{
     height: 357px;
     width: 200px;
     flex-shrink:0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     margin-right: 10px;
-
-    
-
 }
+
 .flex1{
-    display: flex;
     background-color: rgb(32, 41, 49);
     border-radius: 0 0 20px 20px;
-    width: 370px;
     box-sizing: border-box;
     padding:10px;
- 
-
-    
 
 }
 .operations{
     height: 357px;
     width: 140px;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
     flex-shrink: 0;
 
 
