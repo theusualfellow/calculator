@@ -5,6 +5,7 @@ body, .calculator{
 body{
     width: 500px;
     text-align: center;
+    background-color: rgb(128, 97, 97);
 }
 
 .calculator{
@@ -29,7 +30,7 @@ body{
     border-radius: 20px 20px 0 0;
     font-size: 30px;
     text-align: right;
-    background-color: rgb(110, 107, 114);
+    background-color: rgb(38, 41, 43);
     justify-content: right;
     
 }
@@ -41,7 +42,7 @@ body{
 }
 
 .flex1{
-    background-color: rgb(32, 41, 49);
+    background-color: rgb(68, 73, 76);
     border-radius: 0 0 20px 20px;
     box-sizing: border-box;
     padding:10px;
@@ -60,10 +61,11 @@ button{
     height:60px;
     margin:3px;
     font-size: 30px;
-    background-color: rgb(52, 56, 58);
-    color: rgb(121, 64, 69);
+    background-color: rgb(38, 41, 43);
+    color: rgb(125, 53, 59);
     border-radius: 40px;
     border-style: solid;
+    border-color: rgb(72, 57, 57);
     
 
 }   
