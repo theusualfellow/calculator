@@ -5,6 +5,7 @@ const del= document.querySelector(".delete")
 const ce = document.querySelector(".ce")
 const sign = document.querySelector(".sign")
 const equal = document.querySelector(".equal")
+const allButtons = document.querySelectorAll("button")
 
 let num1=''
 let num2=''
@@ -13,6 +14,13 @@ let operand=""
 let num3=''
 let equalNum=''
 output.innerText='0'
+
+
+function setStyles(el, styles) {
+    Object.entries(styles).map(
+      ([property, value]) => el.style[property] = value
+    )
+  }
 
 function operate(operand, num1,num2){
     if(operand==""){
@@ -32,23 +40,8 @@ function operate(operand, num1,num2){
     }
     
 }
-
-buttons.forEach(button => {
+allButtons.forEach(button =>{
     button.addEventListener("click", ()=>{
-        output.innerText=''
-        output.append(button.innerText)
-        num1=output.innerText
-        num3=num3+num1
-        output.innerText=num3
-
-
-        //set the color and radius values when button clicked
-
-        function setStyles(el, styles) {
-            Object.entries(styles).map(
-              ([property, value]) => el.style[property] = value
-            )
-          }
         const origStyles = {
             background: button.style.background,
             border: button.style.border,
@@ -58,7 +51,21 @@ buttons.forEach(button => {
             border:"5px solid orange"
         })
         window.setTimeout(()=> setStyles(button, origStyles), 100)
-    }    
+    })
+})
+
+
+buttons.forEach(button => {
+    button.addEventListener("click", ()=>{
+        output.innerText=''
+        output.append(button.innerText)
+        num1=output.innerText
+        num3=num3+num1
+        output.innerText=num3
+
+        //set the color and radius values when button clicked
+    }
+       
     )})
 
 
@@ -66,15 +73,11 @@ ops.forEach(operation=>{
     operation.addEventListener("click",()=>{
         console.log(num2)
         num2=num3
-        console.log(resultingNumber)
-        console.log(num2)
         resultingNumber=operate(operand,Number(resultingNumber),Number(num2))
-        console.log(resultingNumber)
         output.innerText=resultingNumber
         operand=operation.innerText
         num3=''
         num2=''
-
 })})
 
 del.addEventListener("click", ()=>{
@@ -99,7 +102,13 @@ sign.addEventListener("click",()=>{
 equal.addEventListener("click", ()=>{
     resultingNumber=operate(operand,Number(resultingNumber),Number(num3))
     output.innerText=resultingNumber
-    num2=''
-    num3=''
+    if(operand=="+"||operand=="-"){
+        num2=''
+        num3=''
+    }
+    else{
+        num2='1'
+        num3='1'
+    }
 })
 
